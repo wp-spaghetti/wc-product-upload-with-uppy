@@ -1,0 +1,23 @@
+# Dependencies
+/node_modules/
+/vendor/
+/venv/
+composer.lock
+package-lock.json
+
+# Artifacts
+/assets/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swo
+*.swp
+*~
+
+# Other
+/.claude*

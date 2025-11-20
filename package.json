@@ -1,0 +1,23 @@
+{
+  "name": "wc-product-upload-with-uppy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "lint": "npm run lint:js",
+    "lint:fix": "npm run lint:js -- --fix",
+    "lint:js": "eslint *.js resources/js/**"
+  },
+  "dependencies": {
+    "@uppy/core": "^5.1.1",
+    "@uppy/dashboard": "^5.0.4",
+    "@uppy/tus": "^5.0.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-unicorn": "^62.0.0",
+    "globals": "^16.5.0"
+  }
+}

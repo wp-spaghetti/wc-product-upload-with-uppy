@@ -1,0 +1,48 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Composer dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Build assets
+        run: npm run build
+
+      - name: Create plugin archive
+        run: |
+          mkdir -p build
+          rsync -av --exclude-from=exclude.txt --include-from=include.txt ./ build/wc-product-upload-with-uppy/
+          cd build
+          zip -r wc-product-upload-with-uppy.zip wc-product-upload-with-uppy/
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/wc-product-upload-with-uppy.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

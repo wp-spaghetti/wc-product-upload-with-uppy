@@ -1,0 +1,4 @@
+/* Ensure Uppy dashboard appears above WordPress admin */
+.uppy-Dashboard--modal {
+    z-index: 160001 !important;
+}

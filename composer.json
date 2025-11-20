@@ -1,0 +1,59 @@
+{
+  "name": "wp-spaghetti/wc-product-upload-with-uppy",
+  "description": "Async file uploads with Uppy for WooCommerce downloadable products",
+  "license": "GPL-3.0-or-later",
+  "type": "wordpress-plugin",
+  "keywords": [
+    "wordpress",
+    "woocommerce",
+    "upload",
+    "async",
+    "uppy"
+  ],
+  "authors": [
+    {
+      "name": "Frugan",
+      "email": "dev@frugan.it",
+      "homepage": "https://github.com/frugan-dev",
+      "role": "Developer"
+    }
+  ],
+  "homepage": "https://github.com/wp-spaghetti/wc-product-upload-with-uppy",
+  "support": {
+    "issues": "https://github.com/wp-spaghetti/wc-product-upload-with-uppy/issues",
+    "source": "https://github.com/wp-spaghetti/wc-product-upload-with-uppy",
+    "docs": "https://github.com/wp-spaghetti/wc-product-upload-with-uppy#readme"
+  },
+  "funding": [
+    {
+      "type": "custom",
+      "url": "https://buymeacoff.ee/frugan"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "ankitpokhrel/tus-php": "^2.0"
+  },
+  "require-dev": {
+    "ergebnis/composer-normalize": "^2.48",
+    "friendsofphp/php-cs-fixer": "^3.89",
+    "rector/rector": "^2.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "WpSpaghetti\\WCPUWU\\": "src/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "ergebnis/composer-normalize": true
+    },
+    "sort-packages": true
+  },
+  "scripts": {
+    "lint": "@lint:fix --dry-run",
+    "lint:fix": "@php -d max_execution_time=0 -d memory_limit=-1 -f ./vendor/bin/php-cs-fixer fix --diff --using-cache=no",
+    "rector": "@rector:fix --dry-run",
+    "rector:fix": "@php -d max_execution_time=0 -d memory_limit=-1 -f ./vendor/bin/rector -- process --ansi --clear-cache"
+  }
+}

@@ -1,0 +1,14 @@
++ assets/
++ assets/**
++ resources/
++ resources/**
++ src/
++ src/**
++ vendor/
+- vendor/bin/
+- vendor/symfony/console/Resources/
++ vendor/**
++ composer.json
++ readme.txt
++ wc-product-upload-with-uppy.php
+- *
