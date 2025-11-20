@@ -40,7 +40,7 @@ jobs:
           zip -r wc-product-upload-with-uppy.zip wc-product-upload-with-uppy/
 
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: build/wc-product-upload-with-uppy.zip
           generate_release_notes: true
