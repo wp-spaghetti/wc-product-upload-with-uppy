@@ -6,11 +6,26 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    files: ['**/*.{js,mjs,cjs,ts}'],
+    files: ['build.js'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
+    plugins: {
+      unicorn: eslintPluginUnicorn,
+    },
+    rules: {
+      ...eslintPluginUnicorn.configs.recommended.rules,
+    },
+  },
+  {
+    files: ['resources/js/**/*.js'],
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.builtin,
+        jQuery: 'readonly',
+        WPSPAGHETTI_WCPUWU: 'readonly',
       },
     },
     plugins: {

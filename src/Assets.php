@@ -53,7 +53,7 @@ class Assets
         // Enqueue custom CSS
         wp_enqueue_style(
             'wc-product-upload-with-uppy',
-            WPSPAGHETTI_WCPUWU_URL.'assets/css/admin'.($cache_busting ? '.'.filemtime(\dirname(__DIR__).'/assets/css/admin.css') : '').'.css',
+            WPSPAGHETTI_WCPUWU_URL.'assets/css/admin.min'.($cache_busting ? '.'.filemtime(\dirname(__DIR__).'/assets/css/admin.min.css') : '').'.css',
             ['uppy-dashboard'],
             WPSPAGHETTI_WCPUWU_VERSION
         );

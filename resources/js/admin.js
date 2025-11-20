@@ -71,7 +71,6 @@ jQuery(function($) {
                     const urlResponse = await fetch(
                         WPSPAGHETTI_WCPUWU.tusEndpoint.replace('/upload', '/file-url/' + fileKey),
                         {
-                            credentials: 'same-origin', // Required to include cookies
                             headers: {
                                 'X-WP-Nonce': WPSPAGHETTI_WCPUWU.nonce
                             }
