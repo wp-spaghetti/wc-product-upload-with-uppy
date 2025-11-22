@@ -2,16 +2,14 @@
 
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/wp-spaghetti/wc-product-upload-with-uppy/total)
 ![GitHub Actions Workflow Status](https://github.com/wp-spaghetti/wc-product-upload-with-uppy/actions/workflows/release.yml/badge.svg)
+![GitHub Issues](https://img.shields.io/github/issues/wp-spaghetti/wc-product-upload-with-uppy)
+![GitHub Release](https://img.shields.io/github/v/release/wp-spaghetti/wc-product-upload-with-uppy)
+![License](https://img.shields.io/github/license/wp-spaghetti/wc-product-upload-with-uppy)
 <!--
 ![Coverage Status](https://img.shields.io/codecov/c/github/wp-spaghetti/wc-product-upload-with-uppy)
 ![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=wp-spaghetti_wc-product-upload-with-uppy&metric=alert_status)
 ![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=wp-spaghetti_wc-product-upload-with-uppy&metric=security_rating)
 ![Known Vulnerabilities](https://snyk.io/test/github/wp-spaghetti/wc-product-upload-with-uppy/badge.svg)
--->
-![GitHub Issues](https://img.shields.io/github/issues/wp-spaghetti/wc-product-upload-with-uppy)
-![GitHub Release](https://img.shields.io/github/v/release/wp-spaghetti/wc-product-upload-with-uppy)
-![License](https://img.shields.io/github/license/wp-spaghetti/wc-product-upload-with-uppy)
-<!--
 ![PHP Version](https://img.shields.io/badge/php->=8.0-blue)
 ![Code Climate](https://img.shields.io/codeclimate/maintainability/wp-spaghetti/wc-product-upload-with-uppy)
 -->
