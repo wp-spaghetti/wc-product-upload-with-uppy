@@ -3,7 +3,6 @@
 /vendor/
 /venv/
 composer.lock
-package-lock.json
 
 # Artifacts
 /assets/
