@@ -1,7 +1,7 @@
 ![](.wordpress-org/banner-1544x500.jpg)
 
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/wp-spaghetti/wc-product-upload-with-uppy/total)
-![GitHub Actions Workflow Status](https://github.com/wp-spaghetti/wc-product-upload-with-uppy/actions/workflows/main.yml/badge.svg)
+![GitHub Actions Workflow Status](https://github.com/wp-spaghetti/wc-product-upload-with-uppy/actions/workflows/release.yml/badge.svg)
 <!--
 ![Coverage Status](https://img.shields.io/codecov/c/github/wp-spaghetti/wc-product-upload-with-uppy)
 ![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=wp-spaghetti_wc-product-upload-with-uppy&metric=alert_status)
