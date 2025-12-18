@@ -202,6 +202,35 @@ define('WPSPAGHETTI_WCPUWU_ALLOWED_FILE_TYPES', ['application/pdf', '.pdf']);
 define('WPSPAGHETTI_WCPUWU_CACHE_BUSTING', true);
 ```
 
+## Known Issues
+
+### Wordfence Firewall Compatibility
+
+If you're using Wordfence with the Web Application Firewall (WAF) enabled, you may encounter `403 Forbidden` errors during file uploads. This happens because Wordfence's WAF rule **"Allow PHP in Posts and Pages <= 3.0.4 - Authenticated (Subscriber+) Remote Code Execution"** can mistakenly flag TUS chunked uploads as malicious.
+
+**Solution:**
+
+If you don't use the plugin "Allow PHP in Posts and Pages", you can safely disable this specific WAF rule:
+
+1. Go to **Wordfence → Firewall → Manage Firewall**
+2. Scroll to **Firewall Rules**
+3. Find: `Allow PHP in Posts and Pages <= 3.0.4 - Authenticated (Subscriber+) Remote Code Execution`
+4. Click **Disable** for that rule
+
+This will not affect your site's security if you don't use that specific plugin.
+
+**Alternative Solution:**
+
+If you need to keep that rule enabled, you can whitelist the TUS upload endpoint:
+
+1. Go to **Wordfence → Firewall → Manage Firewall → Whitelisted URLs**
+2. Add these rules (one by one):
+   - **URL**: `/wp-json/wc-product-upload-with-uppy/v1/upload` | **Type**: `POST Body` | **Param**: `*`
+   - **URL**: `/wp-json/wc-product-upload-with-uppy/v1/upload` | **Type**: `Header` | **Param**: `Upload-Offset`
+   - **URL**: `/wp-json/wc-product-upload-with-uppy/v1/upload` | **Type**: `Header` | **Param**: `Upload-Length`
+   - **URL**: `/wp-json/wc-product-upload-with-uppy/v1/upload` | **Type**: `Header` | **Param**: `Tus-Resumable`
+   - **URL**: `/wp-json/wc-product-upload-with-uppy/v1/upload` | **Type**: `Header` | **Param**: `Content-Type`
+
 ## More info
 
 See [LINKS](docs/LINKS.md) file.
