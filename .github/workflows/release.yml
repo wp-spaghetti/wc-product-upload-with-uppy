@@ -43,7 +43,7 @@ jobs:
           zip -r wc-product-upload-with-uppy.zip wc-product-upload-with-uppy/
 
       - name: Create Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           # https://github.com/softprops/action-gh-release
           # Note that if you intend to run workflows on the release event (on: { release: { types: [published] } }),
